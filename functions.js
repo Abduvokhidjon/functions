@@ -17,15 +17,15 @@
 // // uses a loop to calculate and display 
 // // the sum of all numbers from 1 to a given input number.
 
-// function sumOfnumbers(n) 
-// {
-// var sum = 0;
-//     for (i = 1, i <= n, i++) {
+function sumOfnumbers(n) 
+{
+var sum = 0;
+    for (i = 1; i <= n; i++) {
 
-//     }
-//     console.log(sum);
-// }
-// sumOfnumbers(3)
+    }
+    console.log(sum);
+}
+sumOfnumbers(3)
 
 // Write a JavaScript program that takes input from the user for their age and 
 // determines their eligibility for driving based on the following criteria:
