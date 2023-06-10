@@ -21,18 +21,11 @@
 // Calculate and display the average score of all the students.
 
 const array1 = [
-  {
-    name: "Ali",
-    score: 75,
-    name: "Shak",
-    score: 95,
-    name: "Sukhrob",
-    score: 47,
-    name: "Aziz",
-    score: 53,
-    name: "Mahmud",
-    score: 68,
-  },
+  { name: "Ali", score: 75 },
+  { name: "Shak", score: 95 },
+  { name: "Sukhrob", score: 47 },
+  { name: "Aziz", score: 53 },
+  { name: "Mahmud", score: 68 },
 ];
 var sum = 0;
 
@@ -42,3 +35,6 @@ for (i = 0; i < array1.length; i++) {
 var average = sum / array1.length;
 
 console.log(average);
+
+
+
