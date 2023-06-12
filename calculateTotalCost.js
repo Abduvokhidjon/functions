@@ -12,28 +12,26 @@
 // - Compare prices to find the product with the highest price, keeping track of the
 // maximum price and the corresponding product.
 
- 
-
-let products = [
+const products = [
   { name: "Nexia", price: 8970, quantity: 5 },
   { name: "Malibu", price: 29850, quantity: 20 },
   { name: "Gentr", price: 14380, quantity: 17 },
 ];
 function calculateTotalCost(products) {
-  if (products.lenght === 0) {
-    return 0; 
-  } else {
-  var totalPriceofInventory = 0;
-  for (i = 0; i < products.length; i++) {
-    sum = products[i].quantity * products[i].price;
-    totalPriceofInventory += sum;
-    // console.log("Total cost of " + products[i].name + " is " + sum);
+  if (products.length === 0) {
+    return 0;
+  } 
+    var totalPriceofInventory = 0;
+    var totalpriceofeachproduct = 0;
+    for (i = 0; i < products.length; i++) {
+      totalpriceofeachproduct = products[i].quantity * products[i].price;
+      totalPriceofInventory += totalpriceofeachproduct;
+      // console.log("Total cost of " + products[i].name + " is " + sum);
+    }
+
+    return totalPriceofInventory;
+    // console.log("Total cost of inventory is " + totalPriceofInventory);
   }
 
-  return totalPriceofInventory
-  // console.log("Total cost of inventory is " + totalPriceofInventory);
-}
-}
-totalPriceofInventory = calculateTotalCost(products);
-console.log(totalPriceofInventory)
+console.log(calculateTotalCost(products))
 module.exports = calculateTotalCost;
