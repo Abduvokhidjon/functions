@@ -1,6 +1,6 @@
 // test for your function on calculating total cost of products
 // Import the function to be tested
-const product = require("./calculateTotalCost.js");
+const calculateTotalCost = require("./calculateTotalCost");
 
 // Describe the test suite
 describe("calculateTotalCost", () => {

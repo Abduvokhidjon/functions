@@ -1,18 +1,5 @@
 {
-  "dependencies": {
-    "prompt-sync": "^4.2.0"
-  },
-  "name": "functions",
-  "version": "1.0.0",
-  "main": "functions.js",
   "devDependencies": {
-    "jest": "^29.5.0",
-    "jest-cli": "^29.5.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+    "jest": "^29.5.0"
+  }
 }

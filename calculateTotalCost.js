@@ -17,21 +17,28 @@ const products = [
   { name: "Malibu", price: 29850, quantity: 20 },
   { name: "Gentr", price: 14380, quantity: 17 },
 ];
+highestPrice = Math.max(...products.price);
 function calculateTotalCost(products) {
   if (products.length === 0) {
-    return 0;
-  } 
-    var totalPriceofInventory = 0;
-    var totalpriceofeachproduct = 0;
-    for (i = 0; i < products.length; i++) {
-      totalpriceofeachproduct = products[i].quantity * products[i].price;
-      totalPriceofInventory += totalpriceofeachproduct;
-      // console.log("Total cost of " + products[i].name + " is " + sum);
-    }
-
-    return totalPriceofInventory;
-    // console.log("Total cost of inventory is " + totalPriceofInventory);
+      return 0;
   }
 
-console.log(calculateTotalCost(products))
+  var totalPriceofInventory = 0;
+  var highestPrice = ""
+  var totalPriceofEachInventory = 0;
+  for (i = 0; i < products.length; i++) {
+    if (typeof products[i].price !== 'number' && typeof products[i].quantity !== 'number') {
+      continue
+    }
+    totalPriceofEachInventory = products[i].quantity * products[i].price;
+    totalPriceofInventory += totalPriceofEachInventory;
+   
+  }
+  
+  return totalPriceofInventory;
+
+  
+}
+console.log(highestPrice)
+console.log(calculateTotalCost(products));
 module.exports = calculateTotalCost;
