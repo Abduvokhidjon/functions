@@ -20,32 +20,30 @@ const products = [
 // highestPrice = Math.max(...products.price);
 function calculateTotalCost(products) {
   if (products.length === 0) {
-      return 0;
+    return 0;
   }
-
   var totalPriceofInventory = 0;
-  var highestPrice = 0
-  var highestPriceProduct 
+  var highestPrice = 0;
+  var highestPriceProduct;
   var totalPriceofEachInventory = 0;
   for (i = 0; i < products.length; i++) {
-    if (typeof products[i].price !== 'number' && typeof products[i].quantity !== 'number') {
-      continue
-    } 
+    if (
+      typeof products[i].price !== "number" &&
+      typeof products[i].quantity !== "number"
+    ) {
+      continue;
+    }
     if (highestPrice < products[i].price) {
       highestPrice = products[i].price;
       highestPriceProduct = products[i].name;
-    } 
+    }
 
     totalPriceofEachInventory = products[i].quantity * products[i].price;
     totalPriceofInventory += totalPriceofEachInventory;
-   
   }
   console.log("Product with highest price: " + highestPriceProduct);
   return totalPriceofInventory;
-
-  
 }
 // console.log("Product with highest price: " + highestPriceProduct);
 console.log(calculateTotalCost(products));
 module.exports = calculateTotalCost;
-
