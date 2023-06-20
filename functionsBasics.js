@@ -44,12 +44,57 @@
 // functions
 
 
-const name = 'Ali';
-const greet = () => 'hello';
-let reultOne = greet();
-console.log(reultOne);
+// const name = 'Ali';
+// const greet = () => 'hello';
+// let reultOne = greet();
+// console.log(reultOne);
 
-// method 
+// // method 
 
-let resultTwo = name.toUpperCase();
-console.log(resultTwo);
+// let resultTwo = name.toUpperCase();
+// console.log(resultTwo);
+
+// var numOne = 4
+// var numTwo = 5
+
+// const addNumbers = function(a, b) {
+//     return a + b 
+// };
+// const subNumbers = function(a , b) {
+//     return a - b
+// };
+
+// const multiplyNumbers = function (a, b) {
+//     return a * b
+// }
+// console.log(addNumbers(numOne, numTwo));
+// console.log(subNumbers(numOne, numTwo));
+// console.log(multiplyNumbers(numOne, numTwo));
+
+//redo as an array
+
+// const delay = setTimeout(function() {
+//     console.log('hello')
+// }, 8000)
+
+// delay()
+
+// const delay = function() {
+//     setTimeout(function() {
+//         console.log('hello');
+//     }, 2000)
+
+// }
+
+// delay()
+
+var numOne = 4
+var numTwo = 5
+
+const addNumbers = (a, b) => a + b
+const subNumbers = (a , b) => a - b
+const multiplyNumbers = (a, b) => a * b
+
+console.log(addNumbers(numOne, numTwo));
+console.log(subNumbers(numOne, numTwo));
+console.log(multiplyNumbers(numOne, numTwo));
