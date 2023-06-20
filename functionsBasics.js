@@ -88,13 +88,40 @@
 
 // delay()
 
-var numOne = 4
-var numTwo = 5
+// var numOne = 4
+// var numTwo = 5
 
-const addNumbers = (a, b) => a + b
-const subNumbers = (a , b) => a - b
-const multiplyNumbers = (a, b) => a * b
+// const addNumbers = (a, b) => a + b
+// const subNumbers = (a , b) => a - b
+// const multiplyNumbers = (a, b) => a * b
 
-console.log(addNumbers(numOne, numTwo));
-console.log(subNumbers(numOne, numTwo));
-console.log(multiplyNumbers(numOne, numTwo));
+// console.log(addNumbers(numOne, numTwo));
+// console.log(subNumbers(numOne, numTwo));
+// console.log(multiplyNumbers(numOne, numTwo));
+
+function saySomething() {
+    console.log(this.name + "hello");
+}
+
+user = { 
+    name: "Ali",
+    age: 25,
+    profession: "Web developer",
+    method: function saySomething() {
+        console.log(this.name + "hello");
+    }
+};
+
+user.method()
+
+userTwo = { 
+    name: "Sardor",
+    age: 25,
+    profession: "Web developer"};
+
+function saySomething() {
+    console.log(this.name + "hello");
+}
+
+userTwo.methodTwo = saySomething;
+userTwo.methodTwo()
