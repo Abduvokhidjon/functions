@@ -99,29 +99,47 @@
 // console.log(subNumbers(numOne, numTwo));
 // console.log(multiplyNumbers(numOne, numTwo));
 
-function saySomething() {
-    console.log(this.name + "hello");
-}
+// function saySomething() {
+//     console.log(this.name + "hello");
+// }
 
-user = { 
-    name: "Ali",
-    age: 25,
-    profession: "Web developer",
-    method: function saySomething() {
-        console.log(this.name + "hello");
+// user = { 
+//     name: "Ali",
+//     age: 25,
+//     profession: "Web developer",
+//     method: function saySomething() {
+//         console.log(this.name + "hello");
+//     }
+// };
+
+// user.method()
+
+// userTwo = { 
+//     name: "Sardor",
+//     age: 25,
+//     profession: "Web developer"};
+
+// function saySomething() {
+//     console.log(this.name + "hello");
+// }
+
+// userTwo.methodTwo = saySomething;
+// userTwo.methodTwo()
+let calculator = {
+    sum() {
+      return this.a + this.b;
+    },
+  
+    mul() {
+      return this.a * this.b;
+    },
+  
+    read() {
+      this.a = +prompt('a?', 0);
+      this.b = +prompt('b?', 0);
     }
-};
-
-user.method()
-
-userTwo = { 
-    name: "Sardor",
-    age: 25,
-    profession: "Web developer"};
-
-function saySomething() {
-    console.log(this.name + "hello");
-}
-
-userTwo.methodTwo = saySomething;
-userTwo.methodTwo()
+  };
+  
+  calculator.read();
+  alert( calculator.sum() );
+  alert( calculator.mul() );
